@@ -1,0 +1,23 @@
+sp 4 8
+iptag 0 set . 17892
+sp root
+
+app_load fpga_pr.aplx    @0,2  3,5,6,8 101
+app_load fpga_pr.aplx    @11,1 3,5,6,8 101
+app_load fpga_pr.aplx    @11,0 3,5,6,8 101
+
+sleep 5
+
+app_load cfc_xs.aplx  @11,2 3,5,6,8 100
+app_load cfc_xs.aplx  @0,1  3,5,6,8 100
+app_load cfc_xs.aplx  @0,0  3,5,6,8 100
+
+sleep 1
+
+app_sig all 100 sync0
+
+sleep 30
+
+app_stop 100
+app_stop 101 
+
