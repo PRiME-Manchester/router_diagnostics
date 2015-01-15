@@ -28,7 +28,7 @@ APP := sark
 # Configuration options
 
 # Set to 1 for GNU tools, 0 for ARM
-GNU := 1
+GNU := 0
 
 # Set to 1 if using SARK/API (0 for SARK)
 API := 1

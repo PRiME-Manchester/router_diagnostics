@@ -1,0 +1,9 @@
+sp 4 8
+iptag 0 set . 17892
+sp root
+
+app_load transmit.aplx all 1-5 16
+sleep 
+
+app_sig all 16 sync0
+
